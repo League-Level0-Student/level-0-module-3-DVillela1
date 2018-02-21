@@ -1,5 +1,7 @@
 package extras;
 
+import java.awt.Color;
+
 import javax.swing.JOptionPane;
 
 import org.jointheleague.graphical.robot.Robot;
@@ -9,6 +11,17 @@ public static void main(String[] args) {
 
 	String answer = JOptionPane.showInputDialog("Which shape would you like the program to draw?\nSquare, Triangle, or Circle");
 	
+	String color = JOptionPane.showInputDialog("What color would you like the shape to be?\nRed, Green, or Blue.");
+if (color.equalsIgnoreCase("Red")) {
+	rob.setPenColor(Color.RED);
+}
+else if (color.equalsIgnoreCase("Green")) {
+	rob.setPenColor(Color.GREEN);
+}
+else if (color.equalsIgnoreCase("Blue")) {
+	rob.setPenColor(Color.BLUE);
+}
+
 	if (answer.equalsIgnoreCase("Square")) {
 		drawSquare();
 	}
@@ -61,7 +74,6 @@ for (int i = 1; i <= 360; i++) {
 	rob.turn(1);
 }
 }
-
 
 
 
